@@ -1,0 +1,258 @@
+@font-face {
+    font-family: font1;
+    src: url("../font/ChokoMilky-gx8gR.otf");
+}
+@font-face {
+    font-family: font2;
+    src: url("../font/HouseofCandy.otf");
+}
+@font-face {
+    font-family: font3;
+    src: url("../font/Aerostyle-z8e5l.otf");
+}
+@font-face {
+    font-family: font4;
+    src: url("../font/EsplanadeScriptPersonalUse-zqv3.ttf");
+}
+@font-face {
+    font-family: font5;
+    src: url("../font/BeautifulPeoplePersonalUse-dE0g.ttf");
+}
+body {
+    margin: 0;
+}
+figcaption{
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    height:125px;
+    display: flex;
+    align-items: center;
+}
+header div{
+    width: auto;
+    height: 115px;
+    flex: 1;
+}
+header div img{
+    width: auto;
+    height: 100%;
+}
+header nav menu{
+    list-style: none;
+    display: flex;
+    margin:0px;
+}
+header nav menu li{
+    padding:10px;
+    font-size: 20px;
+}
+header li a{
+    color: black;
+    text-decoration: none;
+    font-family: font1;
+    font-size: 25px;
+}
+header li a:hover{
+    font-size: 22px;
+    color: hotpink;
+}
+.background {
+    height:80vh;
+    background:linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("../images/background.jpg"), url("../images/back2.jpg"), url("../images/third-background.jpg");
+    background-position: 0px 50%, 0px 100%, 0px 80px;
+    background-size: cover, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background div:nth-child(1) {
+    text-align: center;
+}
+.background div:nth-child(1) h1{
+    font-family: font2;
+    font-size: 72px;
+    color: #f8f8f8;
+    letter-spacing: 1.5px;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.5);
+    margin-bottom: 10px;
+}
+.background div:nth-child(1) p{
+    font-family: font3;
+    font-size: 75px;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.5);
+    color: rgba(255,101,52,0.9);
+    margin-top: -40px;
+}
+.favorites{
+    margin-bottom: 50px;
+}
+.favorites h2{
+    font-family:font5 ;
+    font-size: 60px;
+    color: lightskyblue;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.candy_fav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.candy_fav figure {
+    position: relative;
+    overflow: hidden;
+}
+.candy_fav img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 25px;
+}
+.candy_fav figcaption {
+    font-family: font4;
+    font-size: 30px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    transform: translateY(100%); /* Initial position below the image */
+    transition: transform 0.3s ease-in-out; /* Add the same transition effect as the images */
+}
+
+.candy_fav figure:hover img {
+    transform: scale(1.1); /* Scale up the image by 10% on hover */
+}
+
+.candy_fav figure:hover figcaption {
+    transform: translateY(0); /* Move the caption up on hover */
+}
+.givegifts {
+    height: 80vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../images/gifts.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the right side */
+    padding-right: 100px; /* Add some padding to the right for better spacing */
+    position: relative;
+}
+
+.givegifts p {
+    font-family: font3;
+    font-size: 135px;
+    color: black;
+    text-align: right;
+    margin-bottom: 0px; /* Add margin to separate the text and the button */
+}
+.givegifts p:nth-child(2){
+    margin-top: -55px;
+}
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #3498db, #2980b9);
+}
+
+.btn a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.btn a:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+.candytype h2{
+    font-family: font5;
+    font-size: 60px;
+    color: plum;
+    text-align: center;
+}
+.difftypes{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.difftypes img{
+    width: 80%;
+    height: auto;
+}
+.difftypes img:hover{
+    transform: scale(1.1); /* Scale up the image by 10% */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; /* Added padding for better spacing */
+}
+
+.contact-form {
+    max-width: 400px; /* Added max-width to limit the width of the contact form */
+}
+
+.contact-form form {
+    display: grid;
+    gap: 15px; /* Added gap between form elements for better spacing */
+}
+
+.contact-form label {
+    color: #333; /* Set label text color */
+    font-size: 16px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 2px;
+    font-size: 14px;
+    border: 1px solid #ddd; /* Added border for input elements */
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added a smooth transition effect */
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+.company-info {
+    max-width: 300px; /* Added max-width to limit the width of company information */
+    line-height: 15px;
+}
+
+.company-info h3 {
+    font-family: font2;
+    color: #3498db; /* Set heading color to match button color */
+}
+footer>p{
+    background-color: #3498db;
+    text-align: center;
+    margin:10px;
+    padding: 20px;
+}
